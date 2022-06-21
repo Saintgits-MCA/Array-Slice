@@ -1,0 +1,38 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice Array Elements</title>
+    <script>
+        function array()
+      {  var i;
+        var j=document.getElementById("j").value;
+        var k=document.getElementById("k").value;
+        var n = document.getElementById("n").value;
+        var elements= new Array(n);
+        for(i=0;i<n;i++)
+        {
+            elements[i] = prompt("Enter the Strings to array:");
+        }
+         document.getElementById("full").value= elements;
+        var array1=elements.slice(j,k);    
+        document.getElementById("slice").value= array1;
+       
+
+     }
+       
+    </script>
+</head>
+<body>
+<form>
+    <h1 style="color:red;">Slice Array Elements</h1>
+   Enter the number of Elements:<input type="text" id="n" placeholder="Enter  number of Elements"><br><br>
+   Enter the lowest interval:<input type="text" id="j" placeholder="Lowest Interval"><br><br>
+   Enter the  highest interval:<input type="text" id="k" placeholder="highest Interval"><br><br>
+   <input type="button" onclick="array()" value=" Submit " style="background-color:green;color:snow;border-radius:7cm;border-color:green;width:82px;">&emsp;&emsp;&emsp;
+   <input type="reset" value="  Reset  " style="background-color:red;color:snow;border-radius:7cm;border-color:red;width: 82px;">
+  </form><br><br><br>
+   Array before slice array: <input type="text" id="full" placeholder="Array before slice the element" readonly=""><br><br><br>  
+   Sliced Element  :&emsp;&emsp;&ensp;&emsp;<input type="text" id="slice" placeholder="sliced Value" readonly=""><br><br>
+
+</body></html>
